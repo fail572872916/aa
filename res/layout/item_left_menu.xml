@@ -2,10 +2,13 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:drawableLeft="@drawable/menu_arr_select"
+    android:drawableLeft="@drawable/menu_item_color"
+    android:enabled="false"
     android:text="新闻"
    android:padding="20dp" 
    android:drawablePadding="10dp"
+   android:textColor="@drawable/menu_item_select"
+
    android:textSize="24sp"
    >
     

@@ -63,6 +63,17 @@ public class MainActivity extends SlidingFragmentActivity {
 		LeftMenuFragment fragment=(LeftMenuFragment) fm.findFragmentByTag(LEFT_MENU_TAG);
 		return fragment;
 	}
-	
+	/**
+	 * 获取右侧菜单的Fragment的对象实例
+	 * @return
+	 */
+
+public CountentFragment getCountentFragment(){
+		
+		FragmentManager fm=getSupportFragmentManager();
+		CountentFragment fragment=(CountentFragment) fm.findFragmentByTag(MAIN_CONTENT_TAG);
+		return fragment;
+	}
+
 	
 }

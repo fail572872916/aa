@@ -155,19 +155,22 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_launcher=0x7f020011;
         public static final int icon_150=0x7f020012;
         public static final int img_menu=0x7f020013;
-        public static final int menu_arr_select=0x7f020014;
-        public static final int newscenter=0x7f020015;
-        public static final int newscenter_press=0x7f020016;
-        public static final int point_nonmal=0x7f020017;
-        public static final int point_red=0x7f020018;
-        public static final int setting=0x7f020019;
-        public static final int setting_press=0x7f02001a;
-        public static final int smartservice=0x7f02001b;
-        public static final int smartservice_press=0x7f02001c;
-        public static final int splash_bg_newyear=0x7f02001d;
-        public static final int splash_horse_newyear=0x7f02001e;
-        public static final int text_bg=0x7f02001f;
-        public static final int title_red_bg=0x7f020020;
+        public static final int menu_arr_normal=0x7f020014;
+        public static final int menu_arr_select=0x7f020015;
+        public static final int menu_item_color=0x7f020016;
+        public static final int menu_item_select=0x7f020017;
+        public static final int newscenter=0x7f020018;
+        public static final int newscenter_press=0x7f020019;
+        public static final int point_nonmal=0x7f02001a;
+        public static final int point_red=0x7f02001b;
+        public static final int setting=0x7f02001c;
+        public static final int setting_press=0x7f02001d;
+        public static final int smartservice=0x7f02001e;
+        public static final int smartservice_press=0x7f02001f;
+        public static final int splash_bg_newyear=0x7f020020;
+        public static final int splash_horse_newyear=0x7f020021;
+        public static final int text_bg=0x7f020022;
+        public static final int title_red_bg=0x7f020023;
     }
     public static final class id {
         public static final int action_settings=0x7f040018;

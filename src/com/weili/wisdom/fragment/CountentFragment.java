@@ -43,10 +43,11 @@ public class CountentFragment extends BaseFragment implements OnCheckedChangeLis
 		ViewUtils.inject(this,view);
 	return view;
 	}
+	
+
+	
 	@Override
 	public void initData() {
-		
-
 	
 		//初始化ViewPage的数据
 		
@@ -64,12 +65,19 @@ public class CountentFragment extends BaseFragment implements OnCheckedChangeLis
 		
 		//监听单选按钮组中的按钮变化
 		radioGroup.setOnCheckedChangeListener(this);
-		
-		
 		//设置默认选中的页面为：首页
 		radioGroup.check(R.id.rb_content_fragment_home);
 		//把首页 的数据加载 了
 	pagerList.get(0).initData();
+	}
+	
+	/**
+	 * 获取新闻中心界面的实例对象
+	 * @return 
+	 */
+	public NewCenterPage getNewCenterPagerInstance(){
+		NewCenterPage  newsCenterPager=(NewCenterPage) pagerList.get(1);
+		return newsCenterPager;
 	}
 	class ConentAdapter extends  PagerAdapter{
 
@@ -152,7 +160,7 @@ public class CountentFragment extends BaseFragment implements OnCheckedChangeLis
 	 */
 	@Override
 	public void onPageSelected(int position) {
-pagerList.get(position).initData();	
+		pagerList.get(position).initData();	
 	}
 	@Override
 	public void onPageScrollStateChanged(int state) {
