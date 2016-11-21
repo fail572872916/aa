@@ -36,7 +36,8 @@ import android.widget.TextView;
 
 public class NewCenterPage extends BasePager {
 
-	private List<MenuDetailBasePager> pagerList;
+	private List<MenuDetailBasePager> pagerList;//左侧菜单独对应详情页面
+	private List<NewsCenterMenu> leftMenuDataList;//左侧菜单的数据
 	public NewCenterPage(Activity activity) {
 		super(activity);
 	}
@@ -97,20 +98,23 @@ public class NewCenterPage extends BasePager {
 	protected void processData(String json) {
 		Gson gosn = new Gson();
 		NewBean bean = gosn.fromJson(json, NewBean.class);
-		System.out.println(bean.data.get(0).children.get(0).title);
-		// 初始化左侧菜单订单数据
-		List<NewsCenterMenu> leftMenuDataList = bean.data; // 左侧菜单的数据
-		// 把左侧菜单的数据传递给LeftMenuFragment处理
-		MainActivity mainUI = ((MainActivity) mActivity);
-		LeftMenuFragment leftMenuFragment = mainUI.getLeftFragment();
-		leftMenuFragment.SetMenuDatalist(leftMenuDataList);
-
+		
+		
 		// 初始化化左侧菜单对应页面：新闻，专题，组图，互动
 	pagerList= new ArrayList<MenuDetailBasePager>();
 		pagerList.add(new NewsMenuDetailPager(mActivity));
 		pagerList.add(new TopicMenuDetailPager(mActivity));
 		pagerList.add(new PhotoMenuDetailPager(mActivity));
 		pagerList.add(new InteractMenuDetailPager(mActivity));
+		
+		System.out.println(bean.data.get(0).children.get(0).title);
+		leftMenuDataList = bean.data;
+		// 把左侧菜单的数据传递给LeftMenuFragment处理
+		MainActivity mainUI = ((MainActivity) mActivity);
+		LeftMenuFragment leftMenuFragment = mainUI.getLeftFragment();
+		leftMenuFragment.SetMenuDatalist(leftMenuDataList);
+
+
 	}
 
 	/**
@@ -119,6 +123,10 @@ public class NewCenterPage extends BasePager {
 	 * @param pposition
 	 */
 	public void switchCurrentPager(int position){
+		//设置当前的标题
+		String title=leftMenuDataList.get(position).title;
+		tvTitle.setText(title);
+		
 		MenuDetailBasePager pager=		pagerList.get(position);
 		flCountent.removeAllViews();//清楚所有子布局
 		flCountent.addView(pager.root);
