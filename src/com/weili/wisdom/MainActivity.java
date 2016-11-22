@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 
 public class MainActivity extends SlidingFragmentActivity {
 	private  final String LEFT_MENU_TAG = "left_menu_tag"; //左侧菜单Fragment的标记，相当于控件的Id,后期可使用tag标记
@@ -19,7 +20,7 @@ public class MainActivity extends SlidingFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		//主界面布局
 		setContentView(R.layout.activity_main);
 		//配置左侧菜单

@@ -25,4 +25,35 @@ public class CacheUtils {
 		
 	return mSharedPreferences.getBoolean(key, defValue);	
 	}
+	/**
+	 * 向SharedPreeferences中存储一个字符串
+	 * @param context
+	 * @param key
+	 * @param value
+	 */
+	public static void putString(Context context,String key,String value){
+		if(mSharedPreferences==null){
+			mSharedPreferences=context.getSharedPreferences(CACHE_FILE_NAME, Context.MODE_PRIVATE);
+			
+		}
+		mSharedPreferences.edit().putString(key, value).commit();
+	}
+	
+	/**
+	 * 从SharedPreneces中取一个字符串
+	 * @param context
+	 * @param key
+	 * @param defValue
+	 * @return defValue 缺省值
+	 */
+	public  static String getString(Context context,String key,String defValue){
+		
+		if(mSharedPreferences==null){
+			
+			mSharedPreferences=context.getSharedPreferences(CACHE_FILE_NAME, Context.MODE_PRIVATE);
+		}
+		return mSharedPreferences.getString(key, defValue);
+	}
+	
+	
 }
