@@ -5,65 +5,28 @@
       "type": "Feature",
       "properties": {},
       "geometry": {
-        "type": "Point",
-        "coordinates": [
-           82.265625,
+        "type": "LineString",
+        "coordinates":  [
+          [
+            82.265625,
             46.558860303117164
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.31249999999999,
+          ],
+          [
+            115.31249999999999,
             23.885837699862005
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-                    125.33203125,
+          ],
+          [
+            125.33203125,
             49.15296965617042
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
+          ],
+          [
             81.2109375,
             30.29701788337205
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.43713378906249,
-          37.802595683318046
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-           83.14453125,
+          ],
+          [
+            83.14453125,
             40.17887331434696
+          ]
         ]
       }
     }
